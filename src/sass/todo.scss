@@ -219,6 +219,13 @@ a:visited {
     transition: transform .3s;
 }
 
+.acc-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .list-item {
     display: flex;
     justify-content: space-between;
@@ -413,17 +420,32 @@ a:visited {
     :root {
         font-size: 70%;
     }
-}
-
-@media (min-width: 1200px) {
-    :root {
-        font-size: 75%;
-    }
 
     .wrapper {
         margin: 0 auto;
         width: 80%;
         max-width: 1320px;
+    }
+
+    .header-wrapper {
+        margin-top: 1em;
+        border-radius: 20px;
+    }
+
+    .category-todo-title-btn {
+        border-radius: 20px;
+    }
+
+    .list-item {
+        margin: 0.5em;
+        width: 90%;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+        font-size: 75%;
     }
 
     .popup-box {
