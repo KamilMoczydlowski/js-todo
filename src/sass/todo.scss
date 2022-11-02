@@ -3,407 +3,449 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
-    position: relative;
-    min-height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-    background-color: $body-bgc;
+	position: relative;
+	min-height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $body-bgc;
 }
 
 .container {
-    width: 100vw;
+	width: 100vw;
 }
 
 .wrapper {
-    width: 100%;
+	width: 100%;
 }
 
 .button {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .header-wrapper {
-    display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // margin-top: 1rem;
-    margin-bottom: 1em;
-    color: $text1;
-    background: $main-color;
-    // border-radius: 20px;
+	display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// margin-top: 1rem;
+	margin-bottom: 1em;
+	color: $text1;
+	background: $main-color;
+	// border-radius: 20px;
 }
 
 .header-box {
-    position: relative;
-    width: 100%;
+	position: relative;
+	width: 100%;
 }
 
 a,
 a:link,
 a:active,
 a:visited {
-    color: $text1;
-    text-decoration: none;
+	color: $text1;
+	text-decoration: none;
 }
 
 .take-me-home {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    font-size: 3.5rem;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	padding: 1rem;
+	font-size: 3.5rem;
+	color: $text1;
+	background-color: $main-color;
+	border: 3px solid $btn-border;
+	box-shadow: 0px 0px 4px $btn-border;
+	border-radius: 50%;
+	transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+
+	&:hover {
+		color: $main-color;
+		background-color: $btn-border;
+		box-shadow: 0px 0px 8px $btn-border;
+	}
 }
 
 .title {
-    margin: 1.5em 0 .8em;
-    font-size: 4rem;
-    text-align: center;
+	margin: 1.5em 0 0.8em;
+	font-size: 4rem;
+	text-align: center;
 }
 
 .choose-category-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2em;
 }
 
 .category-text {
-    margin-top: .4em;
-    font-size: 1.7rem;
-    color: $text1;
+	margin-top: 0.4em;
+	font-size: 1.7rem;
+	color: $text1;
 }
 
 .category-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 
-    .category-select {
-        padding-left: 1em;
-        height: 2em;
-        width: 8em;
-        background-color: $btn-bgc;
-        border-radius: 30px;
-        font-size: 1.7rem;
-        cursor: pointer;
-    }
-}
+		.category-select {
+            margin-top: 0.5em;
+			padding-left: 1em;
+			height: 2em;
+			width: 8em;
+			font-size: 1.7rem;            
+			color: $text1;
+			// background-color: $btn-bgc;
+			// border: 2px solid $btn-border;
+			// border-radius: 30px;
+			background-color: $main-color;
+			border: 3px solid $btn-border;
+			border-radius: 20px;
+			box-shadow: 0px 0px 4px $btn-border;
+			transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+			cursor: pointer;
 
-.select-box {
-    margin-top: .5em;
-    border-radius: 20px;
-    overflow: hidden;
-    
-    .category-select {
-        color: $main-color;
-    }
+			&:hover {
+				color: $main-color;
+				background-color: $btn-border;
+				box-shadow: 0px 0px 8px $btn-border;
+			}
+		}
 }
 
 .add-category-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 
-    .manage-category-btn {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: .5em;
-        padding: 0.5em;
-        height: 2em;
-        width: 50%;
-        max-width: 8em;
-        font-size: 1.7rem;
-        color: $main-color;
-        background-color: $btn-bgc;
-        border: none;
-        border-radius: 20px;
-    }
+	.manage-category-btn {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-top: 0.5em;
+		padding: 0.5em;
+		height: 2em;
+		width: 50%;
+		max-width: 8em;
+		font-size: 1.7rem;
+		// color: $main-color;
+		// background-color: $btn-bgc;
+		// border: none;
+		color: $text1;
+		background-color: $main-color;
+		border: 3px solid $btn-border;
+		box-shadow: 0px 0px 4px $btn-border;
+		border-radius: 20px;
+		transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+
+		&:hover {
+			color: $main-color;
+			background-color: $btn-border;
+			box-shadow: 0px 0px 8px $btn-border;
+		}
+	}
 }
 
 .text-input-box {
-    display: flex;
-    justify-content: center;
-    margin: 3em auto 2em;
+	display: flex;
+	justify-content: center;
+	margin: 3em auto 2em;
 }
 
 .input {
-    padding-left: 1.7rem;
-    height: 4rem;
-    width: 70%;
-    font-size: 1.7rem;
-    border: none;
-    border-radius: 20px;
+	padding-left: 1.7rem;
+	height: 4rem;
+	width: 70%;
+	font-size: 1.7rem;
+	border: none;
+	border-radius: 20px;
 }
 
 .add-btn {
-    margin-left: 1em;
-    font-size: 1.5rem;
-    color: $main-color;
-    background-color: $btn-bgc;
-    border: none;
-    border-radius: 50%;
+	margin-left: 1em;
+	font-size: 1.5rem;
+	width: 4rem;
+	height: 4rem;
+	// color: $main-color;
+	// background-color: $btn-bgc;
+	// border: none;
+	color: $text1;
+	background-color: $main-color;
+	border: 3px solid $btn-border;
+	border-radius: 50%;
+	box-shadow: 0px 0px 4px $btn-border;
+	transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+
+	&:hover {
+		color: $main-color;
+		background-color: $btn-border;
+		box-shadow: 0px 0px 8px $btn-border;
+	}
 }
 
-.add-item-btn {
-    width: 4rem;
-    height: 4rem;
-}
+// .add-item-btn {
+//     width: 4rem;
+//     height: 4rem;
+// }
 
 .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .alert-info {
-    margin-top: 1em;
-    font-size: 1.7rem;
+	margin-top: 1em;
+	font-size: 1.7rem;
+	color: #fff;
 }
 
 .list-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
 
 .accordion {
-    width: 100%;
+	width: 100%;
 }
 
 .acc-box {
-    margin: 1rem auto;
-    width: 100%;
+	margin: 1rem auto;
+	width: 100%;
 }
 
 .category-todo-title-btn {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    width: 100%;
-    font-size: 3rem;
-    color: $text1;
-    background: $main-color;
-    border: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	width: 100%;
+	font-size: 3rem;
+	color: $text1;
+	background: $main-color;
+	border: none;
 }
 
 .category-title-box {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .category-todo-number {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 50px;
 }
 
 .category-arrow {
-    padding: 1rem;
-    transform: rotate(-180deg);
-    transition: transform .3s;
+	padding: 1rem;
+	transform: rotate(-180deg);
+	transition: transform 0.3s;
 }
 
 .acc-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
 
 .list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .3rem;
-    padding: 1rem 2rem;
-    width: 100%;
-    font-size: 2rem;
-    background-color: $li-bgc;
-    border-bottom: 2px solid $li-border-color;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.3rem;
+	padding: 1rem 2rem;
+	width: 100%;
+	font-size: 2rem;
+	background-color: $li-bgc;
+	border-bottom: 2px solid $li-border-color;
 
-    .text-box {
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-    }
+	.text-box {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
 
-    .buttons {
-        text-align: center;
-    }
+	.buttons {
+		text-align: center;
+	}
 
-    .button-check,
-    .button-edit,
-    .button-delete {
-        height: 4rem;
-        border: none;
-        color: $main-color;
-        background-color: $btn-bgc;
-        border: 1px solid $main-color;
-    }
+	.button-check,
+	.button-edit,
+	.button-delete {
+		height: 4rem;
+		border: none;
+		color: $main-color;
+		background-color: $btn-bgc;
+		border: 1px solid $main-color;
+	}
 
-    .button-check,
-    .button-delete {
-        width: 4rem;
-        border-radius: 50%;
-    }
+	.button-check,
+	.button-delete {
+		width: 4rem;
+		border-radius: 50%;
+	}
 
-    .button-edit {
-        width: 5rem;
-        border-radius: 20px;
-        margin: .5rem;
-    }
+	.button-edit {
+		width: 5rem;
+		border-radius: 20px;
+		margin: 0.5rem;
+	}
 
-    .button-edit:disabled {
-        background-color: $btn-disabled-bgc;
-    }
+	.button-edit:disabled {
+		background-color: $btn-disabled-bgc;
+	}
 }
 
 .completed {
-    .text-content {
-        text-decoration: line-through;
-    }
+	.text-content {
+		text-decoration: line-through;
+	}
 
-    .text-content,
-    .button-check {
-        color: $li-completed-color;
-    }
+	.text-content,
+	.button-check {
+		color: $li-completed-color;
+	}
 }
 
 .popup {
-    display: none;
+	display: none;
 }
 
 .popup-shadow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba($color: #000000, $alpha: .3);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba($color: #000000, $alpha: 0.3);
 }
 
 .popup-box {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    color: $text1;
-    background: $main-color;
-    border-radius: 20px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+	color: $text1;
+	background: $main-color;
+	border-radius: 20px;
 
-    .error-msg {
-        margin-top: 1em;
-        font-size: 2rem;
-        color: $error-msg-color;
-    }
+	.error-msg {
+		margin-top: 1em;
+		font-size: 2rem;
+		color: $error-msg-color;
+	}
 }
 
 .popup-title {
-    margin: 2rem 1rem 2rem;
-    font-size: 2.5rem;
-    text-align: center;
-    color: $text1;
+	margin: 2rem 1rem 2rem;
+	font-size: 2.5rem;
+	text-align: center;
+	color: $text1;
 }
 
 .categories-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
 
 .categories-list-item {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .7em;
-    width: 80%;
-    height: 3rem;
-    font-size: 1.5rem;
-    border-radius: 10px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 0.7em;
+	width: 80%;
+	height: 3rem;
+	font-size: 1.5rem;
+	border-radius: 10px;
 }
 
 .categories-list-item::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 45%;
-    height: 1px;
-    background-color: $categories-list-item-before;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 45%;
+	height: 1px;
+	background-color: $categories-list-item-before;
 }
 
 .manage-category-info {
-    display: none;
-    font-size: 1.5rem;
-    color: $error-msg-color;
+	display: none;
+	font-size: 1.5rem;
+	color: $error-msg-color;
 }
 
 .manage-category-item-button {
-    margin: 0 .3em;
-    width: 3.5em;
-    height: 3rem;
-    border: none;
-    border-radius: 10px;
-    color: $main-color;
-    background-color: $btn-bgc;
+	margin: 0 0.3em;
+	width: 3.5em;
+	height: 3rem;
+	border: none;
+	border-radius: 10px;
+	color: $main-color;
+	background-color: $btn-bgc;
 }
 
 .popup-btns {
-    display: flex;
-    justify-content: space-around;
-    width: inherit;
+	display: flex;
+	justify-content: space-around;
+	width: inherit;
 }
 
 .popup-btn {
-    margin: 2rem 1rem;
-    padding: 1rem;
-    height: 5rem;
-    width: 45%;
-    max-width: 25rem;
-    font-size: 2rem;
-    color: $main-color;
-    background-color: $btn-bgc;
-    border: none;
-    border-radius: 50px;
+	margin: 2rem 1rem;
+	padding: 1rem;
+	height: 5rem;
+	width: 45%;
+	max-width: 25rem;
+	font-size: 2rem;
+	color: $main-color;
+	background-color: $btn-bgc;
+	border: none;
+	border-radius: 50px;
 }
 
-// js added classes 
+// js added classes
 
 .display-flex {
-    display: flex;
+	display: flex;
 }
 
 .display-block {
-    display: block;
+	display: block;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .rotate {
-    transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 // media queries
@@ -415,41 +457,40 @@ a:visited {
 //     }
 // }
 
-@media (min-width:992px) {
+@media (min-width: 992px) {
+	:root {
+		font-size: 70%;
+	}
 
-    :root {
-        font-size: 70%;
-    }
+	.wrapper {
+		margin: 0 auto;
+		width: 80%;
+		max-width: 1320px;
+	}
 
-    .wrapper {
-        margin: 0 auto;
-        width: 80%;
-        max-width: 1320px;
-    }
+	.header-wrapper {
+		margin-top: 1em;
+		border-radius: 20px;
+	}
 
-    .header-wrapper {
-        margin-top: 1em;
-        border-radius: 20px;
-    }
+	.category-todo-title-btn {
+		border-radius: 20px;
+	}
 
-    .category-todo-title-btn {
-        border-radius: 20px;
-    }
-
-    .list-item {
-        margin-top: 0.5em;
-        width: 95%;
-        border-radius: 10px;
-    }
+	.list-item {
+		margin-top: 0.5em;
+		width: 95%;
+		border-radius: 10px;
+	}
 }
 
 @media (min-width: 1200px) {
-    :root {
-        font-size: 75%;
-    }
+	:root {
+		font-size: 75%;
+	}
 
-    .popup-box {
-        width: 80%;
-        max-width: 1320px;
-    }
+	.popup-box {
+		width: 80%;
+		max-width: 1320px;
+	}
 }
